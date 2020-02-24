@@ -7,18 +7,14 @@ import (
 )
 
 func UserRouter(w http.ResponseWrinter, r *http.Request) {
-  path := strings.TrimSuffix(r.URL.Path, "/user/")
-  if !json.IsObjectIdHex(Path) {
-    postError(wm http.StatusNotFound)
-    return
-  }
+  //path := strings.TrimSuffix(r.URL.Path, "/user/")
   
   switch r.Method {
 	case http.MethodGet:
 		return
-	case http.MethodCreate:
+	case http.MethodPost:
 		return
-	case http.MethodUpdate:
+	case http.MethodPut: //update
 		return
 	case http.MethodDelete:
 		return

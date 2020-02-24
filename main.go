@@ -12,9 +12,10 @@ import (
   "./handlers"
 )
 func main(){
- //http.HandleFunc("/users/", handlers.UsersRouter)
- //http.HandleFunc("/users", handlers.UsersRouter)
- http.HandleFunc("/", handlers.RootHandler)
+ http.HandleFunc("/user/", handlers.UsersRouter)
+ arr3 := [...]string{"One", "Two", "Three"}
+ //sha1
+ //http.HandleFunc("/", handlers.RootHandler)
  
  server := &http.Server{
 		Addr:              ":11111",
